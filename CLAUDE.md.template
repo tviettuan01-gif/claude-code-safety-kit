@@ -1,0 +1,40 @@
+# {{PROJECT_NAME}} — guide for Claude
+
+> Rename this file to `CLAUDE.md` at the repo root. Keep it short; link to longer docs.
+
+## What this project is
+{{ONE_PARAGRAPH: what the product does, who uses it}}
+
+## Stack and layout
+- Language / framework: {{e.g. TypeScript, Next.js 15, PostgreSQL}}
+- Key folders:
+  - `{{src/}}` — {{what lives here}}
+  - `{{tests/}}` — {{test framework}}
+- Do not touch: `{{generated/}}`, `{{vendor/}}`, migrations already applied
+
+## Commands
+| Task | Command |
+|---|---|
+| Install | `{{npm ci}}` |
+| Run dev | `{{npm run dev}}` |
+| Test (all) | `{{npm test}}` |
+| Test (one file) | `{{npm test -- path/to/file}}` |
+| Lint / format | `{{npm run lint}}` |
+
+## Conventions
+- {{Naming, error handling, logging style}}
+- {{Branch and commit message format}}
+- Write or update a test for every behaviour change.
+
+## Rules
+- Never read or print `.env`, keys or credentials (a hook blocks it). Ask the user to set secrets.
+- Never run destructive commands (a hook blocks the common ones). Never force-push.
+- Ask before adding a dependency.
+- Use mock or sample data from `{{fixtures/}}`; never connect to production.
+
+## Skills in this repo
+| Skill | Use it for |
+|---|---|
+| `/release-notes` | Draft release notes from commits since the last tag |
+| `/review-diff` | Review the current diff against the rules above |
+| `/write-tests` | Add tests for a file or function |
